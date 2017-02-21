@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--Normalize toegepast om te zorgen dat het erzelfde uitziet op alle browser-->
+<link href="normalize.css" type="text/css" rel="stylesheet" />
+<!--Bootstrap-->
+<link href="bootstrap.css" type="text/css" rel="stylesheet" />
+<!--Eigen CSS-->
+<link href="labocss.css" type="text/css" rel="stylesheet" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+<script src="LabTutorJS.js">
+</script>
+</head>
+
+<body ng-app="labTutorApp" ng-controller="MainController">
+
+ <div id="main">
+
+        <!-- angular templating -->
+        <!-- this is where content will be injected -->
+        <div ng-view></div>
+
+    </div>
+
+
+</body>
+</html>

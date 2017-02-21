@@ -1,0 +1,54 @@
+
+
+
+
+
+< <div class="container" >
+      <h1>Kamer #12345</h1>
+      <div class="row temp_entry">
+        <div class="col-md-12">
+          <label>Jouw naam </label>
+          <input type="text" placeholder="Naam" ng-model="room.currentUser.name" />
+          <button type="submit" class="btn btn-primary">Join</button>
+        </div>
+      </div>
+	  
+	  
+  <table class="table">
+
+  <thead>
+  <th>Naam student</th>
+  <th>1</th>
+  <th>2</th>
+  <th>3</th>
+  <th>4</th>
+  <th>5</th>
+  <th>6</th>
+  <th>7</th>
+  <th><img src="finish.png" width="20" height="20"></img></th>
+  </thead>
+  <tbody>
+              <tr ng-class="{ completed: allExercisesCompleted(room.currentUser) }" ng-show="!!room.currentUser.name" class="owner">
+                <td>{{ room.currentUser.name }} <span class="self">YOU</span></td>
+                <td ng-repeat="exerciseStatus in room.currentUser.exercisesStatus">
+                  <input type="checkbox" ng-model="exerciseStatus.completed" />
+                </td>
+                <td>
+                  <img ng-show="allExercisesCompleted(room.currentUser)" src="check.png" width="20" height="20"></img>
+                </td>
+              </tr>
+
+              <tr ng-class="{ completed: allExercisesCompleted(otherUser) }" ng-repeat="otherUser in room.otherUsers">
+                <td>{{ otherUser.name }}</td>
+                <td ng-repeat="exerciseStatus in otherUser.exercisesStatus">
+                  <input type="checkbox" ng-model="exerciseStatus.completed" />
+                </td>
+                <td>
+                  <img ng-show="allExercisesCompleted(otherUser)" src="check.png" width="20" height="20"></img>
+                </td>
+              </tr>
+            </tbody>
+  </table>
+</div>
+</div>
+      </div>

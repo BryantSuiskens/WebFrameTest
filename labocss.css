@@ -1,0 +1,29 @@
+p {text-align: right;
+	 border-width: 2px;
+	border-color: grey;
+	border-style: solid;
+	padding: 5px ;
+	
+	
+}
+
+div {margin-left: 20px;
+	margin-right: 20px;
+	
+	
+}
+
+.self {
+  color: #FFE0B2;
+  font-variant: small-caps;
+}
+
+.owner {color: white;
+		background-color: orange;}
+		
+.completed {color: white;
+			background-color: green;}
+			
+button {border-radius: 8px;
+		background-color: orange;
+		color: white;}
